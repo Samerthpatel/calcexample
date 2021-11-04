@@ -1,30 +1,38 @@
 """ This is the increment function"""
-from calc.operations.addition import Addition
-from calc.operations.subtraction import Subtraction
-from calc.operations.multiplication import Multiplication
-from calc.operations.division import Division
-
+from calc.calculations.addition import Addition
+from calc.calculations.subtraction import Subtraction
+from calc.calculations.multiplication import Multiplication
 
 class Calculator:
-
     """ This is the Calculator class"""
-
+    history = []
     @staticmethod
-    def add_numbers(value_a, value_b):
-        """ adds two numbers"""
-        return Addition.add(value_a, value_b)
-
+    def add_numbers(*args):
+        """ adds list of numbers"""
+        addition = Addition(args)
+        Calculator.history.append(addition)
+        return addition.get_result()
     @staticmethod
-    def subtract_numbers(value_a, value_b):
-        """ subtract number from result"""
-        return Subtraction.subtract(value_a, value_b)
-
+    def clear_history():
+        """ Clear the calculation history"""
+        Calculator.history.clear()
+        return True
     @staticmethod
-    def multiply_numbers(value_a, value_b):
-        """ multiply number from result"""
-        return Multiplication.multiply(value_a, value_b)
-
+    def get_calculation(num):
+        """ get a specific calculation from history"""
+        return Calculator.history[num]
     @staticmethod
-    def divide_numbers(value_a, value_b):
-        """ divide number from result"""
-        return Division.divide(value_a, value_b)
+    def get_calculation_last():
+        """ get last calculation from history"""
+        return Calculator.history[-1]
+    @staticmethod
+    def subtract_numbers(*args):
+        """ subtract a list of numbers from result"""
+        subtraction = Subtraction(args)
+        Calculator.history.append(subtraction)
+        return subtraction.get_result()
+    @staticmethod
+    def multiply_numbers(*args):
+        """ multiplication number from result"""
+        multiplication = Multiplication(args)
+        return multiplication.get_result()

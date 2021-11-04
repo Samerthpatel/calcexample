@@ -1,8 +1,11 @@
-"""Testing Addition"""
-from calc.operations.subtraction import Subtraction
+"""Testing Subtraction"""
+from calc.calculations.subtraction import Subtraction
 
-
-def test_subtraction():
-
-    """testing calc result is -1"""
-    assert Subtraction.subtract(1, 2) == -1
+def test_calculation_subtraction():
+    """testing that our calculator has a static method for addition"""
+    #Arrange
+    mynumbers = (1.0,2.0)
+    subtraction = Subtraction(mynumbers)
+    #Act
+    #Assert
+    assert subtraction.get_result() == -3
