@@ -28,7 +28,7 @@ class Calculations:
 
     @staticmethod
     def get_last_calculation_result_value():
-        """get last calculation convenience method"""
+        """get last calculation"""
         calculation = Calculations.get_last_calculation_object()
         return calculation.get_result()
 
@@ -48,30 +48,26 @@ class Calculations:
         return Calculations.history.append(calculation)
 
     @staticmethod
-    def add_addition_calculation(values):
+    def add_addition_calculation_to_history(values):
         """create an addition and add object to history using factory method create"""
-        # pylint: disable=E1101
         Calculations.add_calculation(Addition.create(values))
         # Get the result of the calculation
-        return Calculations.get_last_calculation_object()
+        return True
 
     @staticmethod
-    def add_subtraction_calculation(values):
+    def add_subtraction_calculation_to_history(values):
         """create a subtraction object to history using factory method create"""
-        # pylint: disable=E1101
         Calculations.add_calculation(Subtraction.create(values))
-        return Calculations.get_last_calculation_object()
+        return True
 
     @staticmethod
-    def add_multiplication_calculation(values):
+    def add_multiplication_calculation_to_history(values):
         """Add a multiplication object to history using factory method create"""
-        # pylint: disable=E1101
         Calculations.add_calculation(Multiplication.create(values))
-        return Calculations.get_last_calculation_object()
+        return True
 
     @staticmethod
-    def add_division_calculation(values):
+    def add_division_calculation_to_history(values):
         """Add a multiplication object to history using factory method create"""
-        # pylint: disable=E1101
         Calculations.add_calculation(Division.create(values))
-        return Calculations.get_last_calculation_object()
+        return True
