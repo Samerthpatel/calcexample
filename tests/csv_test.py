@@ -1,9 +1,11 @@
 """Testing CSV Functions"""
-import pandas
+
 import os.path
-from csv.write import Write
-from csv.read import Read
+import pandas
+# pylint: disable=reimported
 import pandas as pd
+from csvreader.write import Write
+from csvreader.read import Read
 
 
 def test_write_csv():
@@ -35,4 +37,5 @@ def test_read_csv():
     # Act
     df = Read.DataFrameFromCSVFile(fullPath)
     # Assert
+    # pylint: disable=unidiomatic-typecheck
     assert type(df) is pandas.DataFrame
