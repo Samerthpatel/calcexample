@@ -10,7 +10,7 @@ def test_write_csv():
     """testing that our calculator has a static method for addition"""
     # Arrange
     filename = 'csv_output.csv'
-    path = 'tests/TestData'
+    path = 'tests/testdata'
     fullPath = path + '/' + filename
     name_dict = {
         'value1': ['1.0', '2.0', '3.0', '4.0'],
@@ -30,7 +30,7 @@ def test_read_csv():
     """testing that our calculator has a static method for addition"""
     # Arrange
     filename = 'csv_output.csv'
-    path = 'tests/TestData'
+    path = 'tests/testdata'
     fullPath = path + '/' + filename
     # Act
     df = Read.DataFrameFromCSVFile(fullPath)
