@@ -1,16 +1,18 @@
 """Testing CSV Functions"""
-import pandas
+
 import os.path
-from csv.write import Write
-from csv.read import Read
+import pandas
+# pylint: disable=reimported
 import pandas as pd
+from csvreader.write import Write
+from csvreader.read import Read
 
 
 def test_write_csv():
     """testing that our calculator has a static method for addition"""
     # Arrange
     filename = 'csv_output.csv'
-    path = 'tests/TestData'
+    path = 'tests/testdata'
     fullPath = path + '/' + filename
     name_dict = {
         'value1': ['1.0', '2.0', '3.0', '4.0'],
@@ -30,9 +32,10 @@ def test_read_csv():
     """testing that our calculator has a static method for addition"""
     # Arrange
     filename = 'csv_output.csv'
-    path = 'tests/TestData'
+    path = 'tests/testdata'
     fullPath = path + '/' + filename
     # Act
     df = Read.DataFrameFromCSVFile(fullPath)
     # Assert
+    # pylint: disable=unidiomatic-typecheck
     assert type(df) is pandas.DataFrame
