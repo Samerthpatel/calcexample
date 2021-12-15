@@ -3,13 +3,22 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important { color: #336699; }
+        .important { color: #336699;
+            background-color: teal;
+        }
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Index I should see this change with a page refresh</h1>
-    <p class="important">
-      Welcome to my awesome homepage.
-        <img src="{{ url_for('static', filename='images/sample.jpeg') }}">
-    </p>
+    <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">IS218 Tutorial</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">A collection of tutorials about what we learned in IS218.</h2>
+                        <a class="btn btn-primary" href="./pages/git.html">Get Started with Git</a>
+                        <a class="btn btn-primary" href="./pages/article1.html">Go to Project 2</a>
+                    </div>
+                </div>
+            </div>
+        </header>
 {% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699;
+            background-color: teal;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <h3>What is AAA testing?</h3>
+                    <p>The AAA (Arrange-Act-Assert) pattern has become almost a standard across the industry. It suggests that you should divide your test method into three sections: arrange, act and assert. Each one of them only responsible for the part in which they are named after.</p>
+                    <h3>Implementing AAA testing</h3>
+                    <br>
+                    <p>Arrange-Act-Assert is a great way to structure test cases. It prescribes an order of operations:</p>
+                    <br>
+                    <p>Arrange inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.</p>
+                    <br>
+                    <p>Act on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior.</p>
+                    <br>
+                    <p>Assert expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.</p>
+                    <br>
+                    <h3>Structure of AAA testing</h3>
+                    <br><br>
+                    <ul class="simple">
+                        <li>First there is the test definition, docstring and&nbsp;Arrangement.</li>
+                        <li>Empty&nbsp;line.</li>
+                        <li>In the middle, there is a single line of code - this is the most important
+                        part: The&nbsp;Act.</li>
+                        <li>Empty&nbsp;line.</li>
+                        <li>Finally there are the Assertions. You can see that the Assert block code
+                        lines all start with the orange / brown colour.</li>
+                        </ul>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/AAA1.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Structure</h4>
+                            <p class="text-black-50 mb-0">Following what we learned about AAA testing, this is the Structure used to code. </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/AAA2.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Unit testing</h4>
+                            <p class="text-black-50 mb-0">This is an example of applying AAA testing to pythons absolute value function.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/AAA3.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Calcualtor addition funtion</h4>
+                            <p class="text-black-50 mb-0">In this picture we see a function that lets you add two values together. It would be good to be able to test if the function works properly.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/AAA4.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Addition test</h4>
+                            <p class="text-black-50 mb-0">This picture shows how to make a test for the addition function by using the AAA method. The different parts are labeled to make it easier to see how its implemented.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                            <h4>Test code</h4>
+                            <p>Test code, in the same way as production code, is supposed to be clean and self-explanatory. Preempting what you are going to do just adds unnecessary clutter. You can still have a clear distinction of the three steps by using spaces and indentation. Which are ultimately the key features the compiler provides you to structure your code.</p>
+                        </div>
+                        <p>Link to the above code is provided below</p>
+                        <br>
+                        <a href="https://github.com/Samerthpatel/testcode1/tree/AAAtesting">AAA testing example code</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+{% endblock %}

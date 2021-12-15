@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699;
+            background-color: teal;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <h3>What is SOLID OOP?</h3>
+                    <p>Pylint is a source-code, bug and quality checker for the Python programming language. It is named following a common convention in Python of a "py" prefix, and a nod to the C programming lint program. It follows the style recommended by PEP 8, the Python style guide.</p>
+                    <h3>Implementing SOLID OOP</h3>
+
+                    <br><br>
+                    <h3>The SOLID principles</h3>
+                    <ul>
+                        <li>The Single-Responsibility Principle (SRP)</li>
+                        <li>The Open-Closed Principle (OCP)</li>
+                        <li>The Liskov Substitution Principle (LSP)</li>
+                        <li>The Interface Segregation Principle (ISP)</li>
+                        <li>The Dependency inversion Principle</li>
+                    </ul>
+
+                    <p>Link to the above code is provided below</p>
+                    <br>
+                    <a href="https://github.com/Samerthpatel/testcode1/tree/SOLID">SLOID examples code</a>
+                    <br>
+                    <br>
+                    <p>Check out the calculator project and see how SOLID is implemented there.</p>
+                    <br>
+                    <a href="https://github.com/Samerthpatel/calcexample">Calculator project code</a>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/11.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Single-responsibility principle (SRP)</h4>
+                            <p class="text-black-50 mb-0">A class should have one, and only one, reason to change. In the picture we see that the function contains multiple things and is doing all the work. How can we fix this?</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/12.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Solution to SRP</h4>
+                            <p class="text-black-50 mb-0">The first thing we should do, to make this more SRP compliant, is to split the function math_operations into atomic functions! Thus, when a function’s responsibility cannot be divided into more subparts.
+                                The second step is to make a single function (or class), generically named, “main”. This will call all the other functions one-by-one in a step-to-step process.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/13.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Open-Closed principle (OCP)</h4>
+                            <p class="text-black-50 mb-0">Software entities … should be open for extension but closed for modification. You should not need to modify the code you have already written to accommodate new functionality, but simply add what you now need. Refer to the example on the left. </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Liskov Substitution principle (LSP)</h4>
+                            <p class="text-black-50 mb-0">Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/14.png" alt="..." />
+                    <div class="col-xl-4 col-lg-5">
+                            <h4>The Interface Segregation principle</h4>
+                            <p class="text-black-50 mb-0">Many client-specific interfaces are better than one general-purpose interface. Look at the code on the left and try to apply this principle.  </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/15.png" alt="..." />
+
+                    <div class="col-xl-4 col-lg-5">
+                            <h4>Code Solution</h4>
+                            <p class="text-black-50 mb-0">The way suggested by ISP is to create more client-specific interfaces rather than one general-purpose interface.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>The Dependency Inversion Principle</h4>
+                            <p class="text-black-50 mb-0">Abstractions should not depend on details. Details should depend on abstraction. High-level modules should not depend on low-level modules. Both should depend on abstractions</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+{% endblock %}

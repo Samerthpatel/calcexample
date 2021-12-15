@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699;
+            background-color: teal;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <h3>What is Object oriented programming?</h3>
+                    <p>Object-oriented programming is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields, and code, in the form of procedures. A feature of objects is that an object's own procedures can access and often modify the data fields of itself.</p>
+                    <h3>Polymorphism</h3>
+                    <p>In programming languages and type theory, polymorphism is the provision of a single interface to entities of different types or the use of a single symbol to represent multiple different types.</p>
+                    <h3>Abstraction</h3>
+                    <p>An abstract class can be considered as a blueprint for other classes. It allows you to create a set of methods that must be created within any child classes built from the abstract class. A class which contains one or more abstract methods is called an abstract class. An abstract method is a method that has a declaration but does not have an implementation. While we are designing large functional units we use an abstract class. When we want to provide a common interface for different implementations of a component, we use an abstract class. </p>
+                    <h3>Inheritance</h3>
+                    <p>Inheritance is the capability of one class to derive or inherit the properties from another class. The benefits of inheritance are:
+                        It represents real-world relationships well.
+                        It provides reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.
+                        It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.</p>
+                    <h3>Encapsulation</h3>
+                    <p>Encapsulation is the packing of data and functions that work on that data within a single object. By doing so, you can hide the internal state of the object from the outside. This is known as information hiding.</p>
+                    <h3>Implementing OOPs</h3>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/OOP1.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Polymorphism</h4>
+                            <p class="text-black-50 mb-0">The word polymorphism means having many forms. In programming, polymorphism means the same function name (but different signatures) being used for different types. Here we see a basic example of polymorphism</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/OOPs2.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Polymorphism with classes</h4>
+                            <p class="text-black-50 mb-0">The code shows how Python can use two different class types, in the same way. We create a for loop that iterates through a tuple of objects. Then call the methods without being concerned about which class type each object is. We assume that these methods actually exist in each class. </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/OOPs3.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Abstraction</h4>
+                            <p class="text-black-50 mb-0">By default, Python does not provide abstract classes. Python comes with a module that provides the base for defining Abstract Base classes(ABC) and that module name is ABC. </p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/OOPs4.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Inheritance</h4>
+                            <p class="text-black-50 mb-0">This code shows example of inheritance in python.</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="../assets/img/OOPs5.png" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Encapsulation</h4>
+                            <p class="text-black-50 mb-0">This code shows example of Encapsulation in python.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container px-4 px-lg-5">
+                        <!-- Featured Project Row-->
+                        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                            <h4>Use of Object Oriented Programming in the Calculator project.</h4>
+                            <p>In the calcultor project we were able to implement object oriented programming that made our project more readable to other users and helped organize the project. It also made it easy to use different objects in different places. The link to the code for the calculator is provided below. Check it out to see how OOP was implemented to make the project more understanding to users rather then having one python file will all the code which would make looking thruough it and reading it harder and less efficient.</p>
+                        </div>
+                        <p>Link to the above code is provided below</p>
+                        <br>
+                        <a href="https://github.com/Samerthpatel/testcode1/tree/OOPs">Object Oriented Programming example code</a>
+                        <br>
+                        <a href="https://github.com/Samerthpatel/calcexample">Calculator project code</a>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+        </section>
+
+{% endblock %}
