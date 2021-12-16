@@ -9,6 +9,8 @@ pytest  --pylint --cov
 .coveragerc is the config for coverage
 setup.py is a config file for pytest
 
+Youtube Link for video: https://youtu.be/hDKmzku4Z9Y
+
 Calculator
 ![FlaskMessage2](readmeimages/Screen%20Shot%202021-12-15%20at%2011.10.31%20PM.png)
 Flask messages and data history table
