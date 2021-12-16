@@ -8,6 +8,12 @@ from app.controllers.article1_controller import article1controller
 from app.controllers.article2_controller import article2controller
 from app.controllers.article3_controller import article3controller
 from app.controllers.article4_controller import article4controller
+from app.controllers.git_controller import GitController
+from app.controllers.docker_controller import DockerController
+from app.controllers.terminal_controller import TerminalController
+from app.controllers.vi_controller import ViController
+from app.controllers.result_controller import ResultController
+
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -43,6 +49,36 @@ def article4_get():
     """A simple flask web app"""
 
     return article4controller.get()
+
+@app.route("/git", methods=['GET'])
+def git_get():
+    """A simple flask web app"""
+
+    return GitController.get()
+
+@app.route("/docker", methods=['GET'])
+def docker_get():
+    """A simple flask web app"""
+
+    return DockerController.get()
+
+@app.route("/terminal", methods=['GET'])
+def terminal_get():
+    """A simple flask web app"""
+
+    return TerminalController.get()
+
+@app.route("/vi", methods=['GET'])
+def vi_get():
+    """A simple flask web app"""
+
+    return ViController.get()
+
+@app.route("/result", methods=['GET'])
+def result_get():
+    """A simple flask web app"""
+
+    return ResultController.get()
 
 @app.route("/calculator", methods=['GET'])
 def calculator_get():
