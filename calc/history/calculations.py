@@ -1,10 +1,11 @@
 """Calculation history Class"""
+
+import pandas as pd
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
 from calc.calculations.division import Division
 from csvreader.write import Write
-
 class Calculations:
     """Calculations class manages the history of calculations"""
     history = []
@@ -14,10 +15,18 @@ class Calculations:
         """Read the history from csv and put it into the history """
     @staticmethod
     def writeHistoryToCSV():
-
-
         """Write the history to csv file"""
-    # pylint: disable=too-few-public-methods
+    # # pylint: disable=too-few-public-methods
+    @staticmethod
+    def create_dataframe_to_write(val1, val2, result, operation):
+        """appends values and operation to history"""
+        df_to_write = pd.DataFrame(columns=['value_1', 'value_2', 'result', 'operation performed'])
+        df_to_write = df_to_write.append({'value_1': val1,
+                                          'value_2': val2,
+                                          'result': result,
+                                          'operation performed': operation},
+                                         ignore_index=True)
+        return Write.DataFrameToCSVFile((df_to_write))
     @staticmethod
     def clear_history():
         """clear the history of calculations"""
@@ -64,8 +73,8 @@ class Calculations:
         """Add a multiplication object to history using factory method create"""
         Calculations.add_calculation(Multiplication.create(values))
         return True
+
     @staticmethod
     def add_division_calculation_to_history(values):
-        """Add a multiplication object to history using factory method create"""
+        """Add a division object to history using factory method create"""
         Calculations.add_calculation(Division.create(values))
-        return True

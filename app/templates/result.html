@@ -1,10 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
+{{ super() }}
 {% endblock %}
 {% block content %}
 <br>
@@ -12,33 +9,43 @@
 <br>
 <br>
 <br>
-    <h1>Calculation Result</h1>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
+<br>
+<div class="container-fluid res">
+    <div class="row">
+        <div class="col">
+            <h1>Calculation Result</h1>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
             <div class="alert alert-success" role="alert">
                 {{ message }}
             </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
 
-<table id="data" class="table table-striped">
-    <thead>
-    <tr>
-        <th>Value 1</th>
-        <th>Value 2</th>
-        <th>Operation</th>
-        <th>Result</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{value1}}</td>
-            <td>{{value2}}</td>
-            <td>{{operation}}</td>
-            <td>{{result}}</td>
-        </tr>
-    </tbody>
-</table>
+            <div class="container">
+                <table class="table table-striped table-light">
+                    <thead>
+                    <tr>
+                        <td>Value1</td>
+                        <td>Value2</td>
+                        <td>Result</td>
+                        <td>Operation</td>
+                    </tr>
+                    <tbody>
+                    {% for row in row_data %}
+                    <tr>
+                        {% for col, row_ in zip(titles, row) %}
+                        <th scope="row">{{row_}}</th>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

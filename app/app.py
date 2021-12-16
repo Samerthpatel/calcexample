@@ -13,6 +13,7 @@ from app.controllers.docker_controller import DockerController
 from app.controllers.terminal_controller import TerminalController
 from app.controllers.vi_controller import ViController
 from app.controllers.history_controller import HistoryController
+from app.controllers.result_controller import ResultController
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -78,6 +79,12 @@ def history_get():
     """A simple flask web app"""
 
     return HistoryController.get()
+
+@app.route("/result", methods=['GET'])
+def result_get():
+    """A simple flask web app"""
+
+    return ResultController.get()
 
 @app.route("/calculator", methods=['GET'])
 def calculator_get():
