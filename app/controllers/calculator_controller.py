@@ -1,4 +1,6 @@
 """Calculator controller"""
+
+import pandas as pd
 # pylint: disable=unused-import
 from flask import render_template, request, flash, redirect, url_for, session
 from app.controllers.controller import ControllerBase
@@ -30,7 +32,7 @@ class CalculatorController(ControllerBase):
             return render_template('result.html',
                                     data=Calculator.getHistory(), value1=value1, value2=value2,
                                     operation=operation, result=result)
-        return render_template('calculator.html', error=error)
+            return render_template('calculator.html', error=error)
 
     @staticmethod
     def get():

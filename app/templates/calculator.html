@@ -3,8 +3,19 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important {
-            color: #336699;
+        html, body {
+            height: 80%;
+            background-color: #5ff1f1;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
         }
     </style>
 {% endblock %}
@@ -14,6 +25,7 @@
 <br>
 <br>
 <br>
+<body>
     <h1>My Calculator</h1>
      {% if error %}
          <div class="alert alert-danger error" role="alert">
@@ -46,8 +58,10 @@
             <label for="division">division</label>
           </div>
         </fieldset>
-
-        <input type="submit" value="Submit">
+        <br>
+        <input class="btn btn-primary" type="submit" value="Submit">
     </form>
   </div>
+
+</body>
 {% endblock %}

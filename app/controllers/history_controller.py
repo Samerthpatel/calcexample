@@ -3,11 +3,11 @@
 from flask import render_template
 from app.controllers.controller import ControllerBase
 
-class ResultController(ControllerBase):
+class HistoryController(ControllerBase):
     """index controller"""
 
     @staticmethod
     def get():
         """index controller"""
 
-        return render_template('result.html')
+        return render_template('history.html')
